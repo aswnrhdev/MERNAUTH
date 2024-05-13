@@ -95,14 +95,22 @@ const AddNewUser = () => {
 
   return (
     <>
-      <Button onClick={toggleModal}>Add New User</Button>
+      <Button style={{
+            padding: '9px',
+            width: "150px",
+            marginRight: '50px',
+            backgroundColor: '#3C3633',
+            color: '#EEEDEB',
+            border: 'none',
+            transition: 'background-color 0.3s',
+          }} onClick={toggleModal}>Add User</Button>
       <Modal show={showModal} onHide={toggleModal}>
-        <Modal.Header closeButton>
-          <Modal.Title>Add New User</Modal.Title>
+        <Modal.Header closeButton style={{ backgroundColor: '#E0CCBE' }}>
+          <Modal.Title className=" display-3 fw-bold ls-tight px-3" style={{ color: '#3C3633', fontSize: '30px' }}>Add User</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={submitRegisterHandler}>
-            <Form.Group controlId="name">
+            <Form.Group controlId="name" className="my-3">
               <Form.Label>Name*</Form.Label>
               <Form.Control
                 type="text"
@@ -112,7 +120,7 @@ const AddNewUser = () => {
               />
             </Form.Group>
 
-            <Form.Group controlId="email">
+            <Form.Group controlId="email" className="my-3">
               <Form.Label>Email Address*</Form.Label>
               <Form.Control
                 type="email"
@@ -137,7 +145,7 @@ const AddNewUser = () => {
               />
             )}
 
-            <Form.Group controlId="password">
+            <Form.Group controlId="password" className="my-3">
               <Form.Label>Password*</Form.Label>
               <Form.Control
                 type="password"
@@ -147,7 +155,7 @@ const AddNewUser = () => {
               />
             </Form.Group>
 
-            <Form.Group controlId="confirmPassword">
+            <Form.Group controlId="confirmPassword" className="my-3">
               <Form.Label>Confirm Password*</Form.Label>
               <Form.Control
                 type="password"
@@ -160,11 +168,11 @@ const AddNewUser = () => {
             {isLoading && <Loader />}
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={toggleModal}>
+        <Modal.Footer style={{ backgroundColor: '#E0CCBE' }}>
+          <Button variant="secondary" onClick={toggleModal} style={{'width': '120px', background: '#EEEDEB', color: '#3C3633', border: 'none'}}>
             Close
           </Button>
-          <Button type="submit" variant="primary" onClick={submitRegisterHandler} disabled={isLoading}>
+          <Button type="submit" variant="primary" onClick={submitRegisterHandler} disabled={isLoading} style={{'width': '120px', background: '#3C3633', border: 'none'}}>
             {isLoading ? "Registering..." : "Register"}
           </Button>
         </Modal.Footer>

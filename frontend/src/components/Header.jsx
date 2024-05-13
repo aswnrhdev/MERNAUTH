@@ -1,11 +1,13 @@
 import { Navbar, Nav, Container, NavDropdown, Badge } from 'react-bootstrap';
-import { FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
+
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap';
 import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
-
+import { BsDoorOpenFill } from "react-icons/bs";
+import { BsBoxArrowRight } from "react-icons/bs";
+import { FaReact } from "react-icons/fa";
 const Header = () => {
     const { userInfo } = useSelector((state) => state.auth)
 
@@ -22,12 +24,16 @@ const Header = () => {
         }
     }
 
+    const paletteColor = '#3C5B6F';
+
+
     return (
         <header>
-            <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
+            <Navbar style={{ backgroundColor: paletteColor }} variant='dark' expand='lg' collapseOnSelect>
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand>MERN AUTH</Navbar.Brand>
+                        <Navbar.Brand className="my-2 display-3 fw-bold ls-tight px-2" style={{ color: '#4D869C' }}>MERN Cleanse <FaReact style={{ marginBottom: '7'}} />
+                        </Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle aria-controls='basic-navbar-nav' />
                     <Navbar.Collapse id='basic-navbar-nav'>
@@ -40,7 +46,7 @@ const Header = () => {
                                                 Profile
                                             </NavDropdown.Item>
                                         </LinkContainer>
-                                        <NavDropdown.Item onClick={logoutHandler}> 
+                                        <NavDropdown.Item onClick={logoutHandler}>
                                             Logout
                                         </NavDropdown.Item>
                                     </NavDropdown>
@@ -49,16 +55,15 @@ const Header = () => {
                                 <>
                                     <LinkContainer to='/login'>
                                         <Nav.Link>
-                                            <FaSignInAlt /> Sign In
+                                            <BsBoxArrowRight /> Sign In
                                         </Nav.Link>
                                     </LinkContainer>
                                     <LinkContainer to='/register'>
                                         <Nav.Link>
-                                            <FaSignInAlt /> Sign Up
+                                            <BsBoxArrowRight /> Sign Up
                                         </Nav.Link>
                                     </LinkContainer>
                                 </>
-
                             )}
                         </Nav>
                     </Navbar.Collapse>
@@ -68,4 +73,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;

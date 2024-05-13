@@ -116,13 +116,13 @@ const updateUserProfile = asyncHandler(async (req, res) => {
 const createSampleAdmin = async () => {
     try {
 
-        const existingAdmin = await Admin.findOne({ email: 'admin@gmail.com' });
+        const existingAdmin = await Admin.findOne({ email: 'aswnrh.dev@gmail.com' });
         if (!existingAdmin) {
 
-            const hashedPassword = await bcrypt.hash('admin123', 10);
+            const hashedPassword = await bcrypt.hash('aswnrh@', 10);
 
             const admin = new Admin({
-                email: 'admin@gmail.com',
+                email: 'aswnrh.dev@gmail.com',
                 password: hashedPassword
             });
 
