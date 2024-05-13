@@ -1,1 +1,1 @@
-This repository contains the codebase for a MERN (MongoDB, Express.js, React.js, Node.js) authentication application. It encompasses all essential components and functionalities related to MERN stack development, focusing specifically on user authentication.
+
