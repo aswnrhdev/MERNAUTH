@@ -16,7 +16,7 @@ const authUser = asyncHandler(async (req, res) => {
       _id: user._id,
       name: user.name,
       email: user.email,
-      profile:user.profile
+      profile: user.profile
     })
   } else {
     console.log("Invalid email or password");
@@ -51,7 +51,7 @@ const registerUser = asyncHandler(async (req, res) => {
       _id: user._id,
       name: user.name,
       email: user.email,
-      profile:user.profile,
+      profile: user.profile,
     })
   } else {
     res.status(400);

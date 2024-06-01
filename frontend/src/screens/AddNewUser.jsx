@@ -96,14 +96,14 @@ const AddNewUser = () => {
   return (
     <>
       <Button style={{
-            padding: '9px',
-            width: "150px",
-            marginRight: '50px',
-            backgroundColor: '#3C3633',
-            color: '#EEEDEB',
-            border: 'none',
-            transition: 'background-color 0.3s',
-          }} onClick={toggleModal}>Add User</Button>
+        padding: '9px',
+        width: "150px",
+        marginRight: '50px',
+        backgroundColor: '#3C3633',
+        color: '#EEEDEB',
+        border: 'none',
+        transition: 'background-color 0.3s',
+      }} onClick={toggleModal}>Add User</Button>
       <Modal show={showModal} onHide={toggleModal}>
         <Modal.Header closeButton style={{ backgroundColor: '#E0CCBE' }}>
           <Modal.Title className=" display-3 fw-bold ls-tight px-3" style={{ color: '#3C3633', fontSize: '30px' }}>Add User</Modal.Title>
@@ -169,10 +169,10 @@ const AddNewUser = () => {
           </Form>
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: '#E0CCBE' }}>
-          <Button variant="secondary" onClick={toggleModal} style={{'width': '120px', background: '#EEEDEB', color: '#3C3633', border: 'none'}}>
+          <Button variant="secondary" onClick={toggleModal} style={{ 'width': '120px', background: '#EEEDEB', color: '#3C3633', border: 'none' }}>
             Close
           </Button>
-          <Button type="submit" variant="primary" onClick={submitRegisterHandler} disabled={isLoading} style={{'width': '120px', background: '#3C3633', border: 'none'}}>
+          <Button type="submit" variant="primary" onClick={submitRegisterHandler} disabled={isLoading} style={{ 'width': '120px', background: '#3C3633', border: 'none' }}>
             {isLoading ? "Registering..." : "Register"}
           </Button>
         </Modal.Footer>

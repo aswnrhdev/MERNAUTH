@@ -41,7 +41,7 @@ function AdminLogin() {
           <div className="card p-5 shadow-lg border-0" style={{ backgroundColor: '#E0CCBE', transition: 'background-color 0.3s' }}>
             <div className="text-center text-md-start">
               <h1 className="my-4 display-3 fw-bold ls-tight px-3" style={{ color: '#747264' }}>
-                Admin Login
+                Admin Login.
               </h1>
 
               <form>

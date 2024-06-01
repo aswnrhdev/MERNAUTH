@@ -5,9 +5,6 @@ import bcrypt from 'bcryptjs';
 import generateToken from "../utils/generateToken.js"
 
 
-// @desc    Auth admin/set token
-//route     POST /api/admin/auth
-//@access   Public
 const authAdmin = asyncHandler(async (req, res) => {
     const { email, password } = req.body;
     const admin = await Admin.findOne({ email });
@@ -25,9 +22,6 @@ const authAdmin = asyncHandler(async (req, res) => {
 });
 
 
-// @desc    Logout admin
-//route     POST /api/admin/logout
-//@access   Public
 const logoutAdmin = asyncHandler(async (req, res) => {
     res.cookie("adminJwt", "", {
         httpOnly: true,
@@ -37,18 +31,12 @@ const logoutAdmin = asyncHandler(async (req, res) => {
 });
 
 
-// @desc    User data
-//route     GET /api/admin/users
-//@access   Private
 const getUsers = asyncHandler(async (req, res) => {
     const users = await User.find({}).select("-password");
     res.json({ users });
 });
 
 
-// @desc    Delete user
-//route     DELETE /api/admin/users/delete
-//@access   Private
 const deleteUser = asyncHandler(async (req, res) => {
     console.log('In delete user reached');
     const userId = req.query.id;
@@ -67,9 +55,6 @@ const deleteUser = asyncHandler(async (req, res) => {
 });
 
 
-// @desc    Block /Unblock the user
-//route     PATCH /api/admin/users/unblock-block
-//@access   Private
 const blockUnblockUser = asyncHandler(async (req, res) => {
     console.log('reacing in the blockUnblockUser');
     const userId = req.query.id;
@@ -82,9 +67,6 @@ const blockUnblockUser = asyncHandler(async (req, res) => {
 });
 
 
-// @desc    Update user Profile
-//route     PUT /api/admin/users/update
-//@access   Private
 const updateUserProfile = asyncHandler(async (req, res) => {
     const user = await User.findById(req.body._id);
     if (user) {
@@ -112,7 +94,6 @@ const updateUserProfile = asyncHandler(async (req, res) => {
 });
 
 
-//Admin
 const createSampleAdmin = async () => {
     try {
 

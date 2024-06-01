@@ -11,7 +11,6 @@ import HomeScreen from './screens/HomeScreen.jsx'
 import LoginScreen from './screens/LoginScreen.jsx'
 import RegisterScreen from './screens/RegisterScreen.jsx'
 import ProfileScreen from './screens/ProfileScreen.jsx'
-
 import AdminLogin from './screens/AdminLogin.jsx'
 import AdminPrivateRoute from './components/AdminPrivateRoute.jsx'
 import DashBoard from './screens/Dashboard.jsx'

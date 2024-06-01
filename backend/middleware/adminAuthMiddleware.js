@@ -7,7 +7,7 @@ const protect = asyncHandler(async (req, res, next) => {
 
     token = req.cookies.jwt;
 
-    if(token){
+    if (token) {
         try {
             const decoded = jwt.verify(token, process.env.JWT_SECERT);
             req.user = await Admin.findById(decoded.userId).select("-password");
@@ -15,7 +15,7 @@ const protect = asyncHandler(async (req, res, next) => {
         } catch (error) {
             throw new Error("Not authorized, no token");
         }
-    }else{
+    } else {
         console.log('No Token');
     }
 })

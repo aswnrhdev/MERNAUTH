@@ -15,7 +15,7 @@ const Hero = () => {
         navigate('/register')
     }
 
-    // Define the colors from the palette
+
     const cardColor = '#CDE8E5';
     const fontColor = '#4D869C';
 

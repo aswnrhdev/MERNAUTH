@@ -32,7 +32,7 @@ const Header = () => {
             <Navbar style={{ backgroundColor: paletteColor }} variant='dark' expand='lg' collapseOnSelect>
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand className="my-2 display-3 fw-bold ls-tight px-2" style={{ color: '#4D869C' }}>MERN Cleanse <FaReact style={{ marginBottom: '7'}} />
+                        <Navbar.Brand className="my-2 display-3 fw-bold ls-tight px-2" style={{ color: '#4D869C' }}>MERN Cleanse <FaReact style={{ marginBottom: '7' }} />
                         </Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle aria-controls='basic-navbar-nav' />

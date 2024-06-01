@@ -10,37 +10,37 @@ import Loader from "../components/Loader";
 
 const LoginScreen = () => {
 
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-    const [login, { isLoading }] = useLoginMutation();
-    const { userInfo } = useSelector((state) => state.auth);
+  const [login, { isLoading }] = useLoginMutation();
+  const { userInfo } = useSelector((state) => state.auth);
 
-    useEffect(() => {
-        if (userInfo) {
-            navigate('/');
-        }
-    }, [navigate, userInfo])
-
-    const submitHandler = async (e) => {
-        e.preventDefault();
-        try {
-            const res = await login({ email, password }).unwrap();
-            dispatch(setCredentials({ ...res }))
-            navigate('/')
-        } catch (err) {
-            toast.error(err?.data?.message || err.error);
-        }
+  useEffect(() => {
+    if (userInfo) {
+      navigate('/');
     }
+  }, [navigate, userInfo])
 
-    return (
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await login({ email, password }).unwrap();
+      dispatch(setCredentials({ ...res }))
+      navigate('/')
+    } catch (err) {
+      toast.error(err?.data?.message || err.error);
+    }
+  }
+
+  return (
 
 
 
-        <div className="container pt-5 mt-1 background-radial-gradient">
+    <div className="container pt-5 mt-1 background-radial-gradient">
       <div className="row">
         <div className="col-md-7 mx-auto">
           <div className="card p-5 shadow-lg border-0" style={{ backgroundColor: '#CDE8E5', transition: 'background-color 0.4s' }}>
@@ -95,7 +95,7 @@ const LoginScreen = () => {
                   </button>
                 </div>
 
-                    <p className="mt-5" style={{ color: '#4D869C' }}>New to Mern Cleanse? Tap <Link to='/register' style={{color: '#77B0AA'}}>Regsiter</Link> to create an account.</p>
+                <p className="mt-5" style={{ color: '#4D869C' }}>New to Mern Cleanse? Tap <Link to='/register' style={{ color: '#77B0AA' }}>Regsiter</Link> to create an account.</p>
               </form>
 
             </div>
@@ -104,7 +104,7 @@ const LoginScreen = () => {
       </div>
     </div>
 
-    )
+  )
 }
 
 export default LoginScreen

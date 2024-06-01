@@ -45,7 +45,7 @@ function DashBoard() {
   const [logoutAdminApiCall] = useAdminLogoutMutation();
 
   const { userInfo } = useSelector((state) => state.auth);
-  
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -136,7 +136,6 @@ function DashBoard() {
   const handleUpdate = async () => {
     const emailRegex = /^\S+@\S+\.\S+$/;
     const nameRegex = /^[^\s]+(\s[^\s]+)*$/;
-    const mobileRegex = /^(?![0-5])\d{10}$/;
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
     console.log(userDataForEdit);
@@ -205,15 +204,16 @@ function DashBoard() {
       <p className="mt-3">To add a new user, kindly click the button below and complete the required fields.</p>
       <AddNewUser />
 
-      {/* 
-      <form className="form-inline">
-        <input className="form-control mr-sm-2 bg-light text-dark border-dark mt-3" onChange={(e) => setSearch(e.target.value)} type="search" value={search} placeholder="Search Users" aria-label="Search" />
-      </form> */}
+
+
+      {/* <input className="form-control mr-sm-2 bg-light text-dark border-dark mt-3" type="search" placeholder="Search Users" value={search} onChange={(e) => setSearch(e.target.value)}/> */}
 
       <p className="mt-3">The table below contains a list of users in the database. You can search, update, and remove users from it.</p>
 
 
-
+      <form className="form-inline">
+        <input style={{ width: '400px', border: 'none' }} className="form-control mr-sm-2 bg-light text-dark border-dark mt-3" onChange={(e) => setSearch(e.target.value)} type="search" value={search} placeholder="Search Users" aria-label="Search" />
+      </form>
 
 
 
@@ -242,18 +242,18 @@ function DashBoard() {
                   <FaUserEdit
                     onClick={() => handleShow(obj)}
                     size={18}
-                    style={{ color: '#3C3633', 'width': '30px', transition: "color 0.3s ease" , width: '40px', border: 'none'}}
+                    style={{ color: '#3C3633', 'width': '30px', transition: "color 0.3s ease", width: '40px', border: 'none' }}
                   />
                 </button>
 
                 <button onClick={() => handleDelete(obj._id)} className="m-2 btn btn-danger" >
                   <MdDelete
                     size={18}
-                    style={{ color: "black", transition: "color 0.3s ease", width: '40px', border: 'none'}}
+                    style={{ color: "black", transition: "color 0.3s ease", width: '40px', border: 'none' }}
                   />
                 </button>
 
-                
+
               </td>
             </tr>
           ))}
@@ -261,45 +261,45 @@ function DashBoard() {
       </table>
 
 
-      
 
-<Modal show={showEditModal} onHide={handleClose}>
-      <Modal.Header closeButton style={{ backgroundColor: '#E0CCBE' }}>
-        <Modal.Title className=" display-3 fw-bold ls-tight px-3" style={{ color: '#3C3633', fontSize: '30px' }}>Edit User</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <Form>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Name*</Form.Label>
-            <Form.Control
-              type="name"
-              value={userDataForEdit?.name}
-              placeholder="Enter a name here"
-              onChange={(e) => { setUserDataForEdit({ ...userDataForEdit, name: e.target.value }) }}
-              autoFocus
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Email*</Form.Label>
-            <Form.Control
-              type="email"
-              value={userDataForEdit?.email}
-              placeholder="Enter an email here"
-              onChange={(e) => { setUserDataForEdit({ ...userDataForEdit, email: e.target.value }) }}
-              autoFocus
-            />
-          </Form.Group>
-        </Form>
-      </Modal.Body>
-      <Modal.Footer style={{ backgroundColor: '#E0CCBE' }}>
-        <Button variant="secondary" onClick={handleClose} style={{'width': '120px', background: '#EEEDEB', color: '#3C3633', border: 'none'}}>
-          Close
-        </Button>
-        <Button variant="primary" onClick={handleUpdate} style={{'width': '120px',  background: '#3C3633', border: 'none'}}>
-          Save
-        </Button>
-      </Modal.Footer>
-    </Modal>
+
+      <Modal show={showEditModal} onHide={handleClose}>
+        <Modal.Header closeButton style={{ backgroundColor: '#E0CCBE' }}>
+          <Modal.Title className=" display-3 fw-bold ls-tight px-3" style={{ color: '#3C3633', fontSize: '30px' }}>Edit User</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Name*</Form.Label>
+              <Form.Control
+                type="name"
+                value={userDataForEdit?.name}
+                placeholder="Enter a name here"
+                onChange={(e) => { setUserDataForEdit({ ...userDataForEdit, name: e.target.value }) }}
+                autoFocus
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Email*</Form.Label>
+              <Form.Control
+                type="email"
+                value={userDataForEdit?.email}
+                placeholder="Enter an email here"
+                onChange={(e) => { setUserDataForEdit({ ...userDataForEdit, email: e.target.value }) }}
+                autoFocus
+              />
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer style={{ backgroundColor: '#E0CCBE' }}>
+          <Button variant="secondary" onClick={handleClose} style={{ 'width': '120px', background: '#EEEDEB', color: '#3C3633', border: 'none' }}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleUpdate} style={{ 'width': '120px', background: '#3C3633', border: 'none' }}>
+            Save
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 

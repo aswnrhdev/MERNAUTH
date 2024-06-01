@@ -299,7 +299,7 @@ const ProfileScreen = () => {
                                         style={{
                                             'height': '100px',
                                             'width': '100px',
-                                            'borderRadius': '50%' // Set border-radius to 50% for a circle
+                                            'borderRadius': '50%' 
                                         }}
                                     />
                                     :
@@ -310,7 +310,7 @@ const ProfileScreen = () => {
                                             style={{
                                                 'height': '100px',
                                                 'width': '100px',
-                                                'borderRadius': '50%', // Set border-radius to 50% for a circle
+                                                'borderRadius': '50%', 
                                                 'cursor': 'pointer'
                                             }}
                                         />
