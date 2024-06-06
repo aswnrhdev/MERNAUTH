@@ -1,6 +1,6 @@
 # MERN-Cleanse
 
-Welcome to the MERN-Cleanse project repository! This is a comprehensive project built on the MERN (MongoDB, Express, React, Node.js) stack. It serves as a boilerplate for MERN Authentication, featuring JWT storage in HTTP-Only cookies for enhanced security
+Welcome to the MERN-Cleanse project repository! This is a comprehensive project built on the MERN (MongoDB, Express, React, Node.js) stack. It serves as a boilerplate for MERN Authentication, featuring JWT storage in HTTP-Only cookies for enhanced security.
 
 ## Introduction
 
