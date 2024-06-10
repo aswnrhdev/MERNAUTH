@@ -25,7 +25,7 @@ MERN-Cleanse is a robust project template built on MongoDB, Express, React, and 
 
 ## Getting Started
 
-To get started with MERN-Cleanse, follow these steps:
+To get started with MERN-Cleanse, follow these steps
 
 1. Clone this repository to your local machine.
 2. Navigate to the project directory and install dependencies using npm or yarn.
