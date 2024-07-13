@@ -8,7 +8,7 @@ MERN-Cleanse is a robust project template built on MongoDB, Express, React, and 
 
 ## Features
 
-- **MERN Authentication**: Secure authentication system with JWT storage in HTTP-Only cookies.
+- **MERN Authentication**: Secure authentication system with JWT storage in HTTP-Only cookies
 - **Boilerplate Project**: A comprehensive project structure for starting new MERN stack projects.
 - **Redux Toolkit Integration**: Integrated Redux Toolkit for efficient state management.
 - **React Bootstrap**: Utilizes React Bootstrap for responsive and sleek UI components.
