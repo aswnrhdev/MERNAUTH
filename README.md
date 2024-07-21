@@ -4,7 +4,7 @@ Welcome to the MERN-Cleanse project repository! This is a comprehensive project 
 
 ## Introduction
 
-MERN-Cleanse is a robust project template built on MongoDB, Express, React, and Node.js technologies. It provides developers with a solid foundation for building full-stack web applications with MERN Authentication capabilities. Leveraging Redux Toolkit and the React Bootstrap library, MERN-Cleanse offers streamlined development and enhanced functionality.
+MERN-Cleanse is a robust project template built on MongoDB, Express, React, and Node.js technologies. It provides developers with a solid foundation for building full-stack web applications with MERN Authentication capabilities. Leveraging Redux Toolkit and the React Bootstrap library, MERN-Cleanse offers streamlined development and enhanced functionality
 
 ## Features
 
