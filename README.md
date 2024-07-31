@@ -29,7 +29,7 @@ To get started with MERN-Cleanse, follow these steps
 
 1. Clone this repository to your local machine
 2. Navigate to the project directory and install dependencies using npm or yarn
-3. Configure your MongoDB connection URI in the server configuration file.
-4. Start the development server by running `npm run dev`.
+3. Configure your MongoDB connection URI in the server configuration file
+4. Start the development server by running `npm run dev`
 5. Explore the project structure and start building your MERN stack application!
 
