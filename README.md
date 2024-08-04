@@ -23,7 +23,6 @@ MERN-Cleanse is a robust project template built on MongoDB, Express, React, and 
 - **Redux Toolkit**: State management library for React applications
 - **React Bootstrap**: Frontend framework for responsive and mobile-first web development
 
-## Getting Started
 
 To get started with MERN-Cleanse, follow these steps below
 
