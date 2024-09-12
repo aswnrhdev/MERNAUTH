@@ -17,8 +17,8 @@ MERN-Cleanse is a robust project template built on MongoDB, Express, React, and 
 ## Technologies Used
 
 - **MongoDB**: NoSQL database for storing application data
-- **Express.js**: Web application framework for Node.js, providing robust features for building APIs
-- **React.js**: JavaScript library for building user interfaces
+- **Express.js**: Web application framework for Node.js, providing robust features for building APIs.
+- **React.js**: JavaScript library for building user interfaces.
 - **Node.js**: JavaScript runtime environment for server-side development
 - **Redux Toolkit**: State management library for React applications
 - **React Bootstrap**: Frontend framework for responsive and mobile-first web development
